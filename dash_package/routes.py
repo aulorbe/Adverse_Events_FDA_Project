@@ -1,7 +1,8 @@
-from flask import render_template
+from flask import render_template, jsonify, json
 # from flask import Flask
 # from dash_package.models import Listing
-from dash_package import server
+
+from dash_package.__init__ import *
 import pdb
 from dash_package.models import *
 
@@ -11,11 +12,11 @@ from dash_package.models import *
 #     brand = Brands.query.first()
 #     return brand.name
 
-@server.route('/'):
+@app.server.route('/dashboard')
 def test():
-    return db.session.query(Brands).all()
+    return Brands.query.all()
 
-    # return render_template('index.html', apartments = apartments)
+
 
 
 # if __name__ == '__main__':
