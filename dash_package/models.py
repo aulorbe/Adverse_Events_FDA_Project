@@ -1,9 +1,11 @@
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, Text, ForeignKey, create_engine
-from sqlalchemy.orm import relationship
-import sqlalchemy
-from dash_package import db
+# from sqlalchemy.ext.declarative import declarative_base
+# from sqlalchemy import Column, Integer, Text, ForeignKey, create_engine
+# from sqlalchemy.orm import relationship
+# import sqlalchemy
+# from dash_package import db
 # Base = declarative_base()
+
+from dash_package.__init__ import db 
 
 class Adverse_Events(db.Model): #association table
     __tablename__ = 'events'
